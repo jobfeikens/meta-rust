@@ -9,7 +9,7 @@ require recipes-devtools/rust/rust-common.inc
 require cargo.inc
 
 CARGO = "${WORKDIR}/${CARGO_SNAPSHOT}/bin/cargo"
-BASEDEPENDS:remove = "cargo-native"
+BASEDEPENDS_remove = "cargo-native"
 
 export RUST_TARGET_PATH="${WORKDIR}/targets/"
 
@@ -70,5 +70,5 @@ do_install () {
 }
 
 PKG_SYS_BINDIR = "${SDKPATHNATIVE}/usr/bin"
-FILES:${PN} += "${base_prefix}/environment-setup.d ${PKG_SYS_BINDIR}"
+FILES_${PN} += "${base_prefix}/environment-setup.d ${PKG_SYS_BINDIR}"
 
