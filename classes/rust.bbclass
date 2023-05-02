@@ -15,7 +15,7 @@ def rust_base_dep(d):
             deps += " rust-native"
     return deps
 
-DEPENDS:append = " ${@rust_base_dep(d)}"
+DEPENDS_append = " ${@rust_base_dep(d)}"
 
 # BUILD_LDFLAGS
 # 	${STAGING_LIBDIR_NATIVE}

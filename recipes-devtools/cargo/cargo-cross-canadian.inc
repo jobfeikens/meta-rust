@@ -37,7 +37,7 @@ python do_rust_gen_targets () {
     rust_gen_target(d, 'HOST', wd, "", "generic", d.getVar('HOST_ARCH'))
 }
 
-do_compile:prepend () {
+do_compile_prepend () {
 	PKG_CONFIG_PATH="${RECIPE_SYSROOT_NATIVE}/usr/lib/pkgconfig:${PKG_CONFIG_PATH}"
 }
 
